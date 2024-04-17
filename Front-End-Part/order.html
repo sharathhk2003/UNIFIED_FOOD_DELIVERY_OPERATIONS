@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<footer id="header"></footer>
+<section class="food-order">
+    <div class="container">        
+        <h2 class="text-center text-white">Please confirm to place order</h2>
+        <form action="" method="POST" class="order">
+            <fieldset>
+                <legend style="color:white;">Selected Food</legend>
+                <div class="food-menu-img">
+                    <img src="./images/food/Food-Name-391.jpg" alt="Sample Food" class="img-responsive img-curve">
+                </div>
+                <div class="food-menu-desc">
+                    <h3 style="color:white;">Burger</h3>
+                    <input type="hidden" name="food" value="Sample Food Title">
+
+                    <p class="food-price" style="color:white;">₹150</p>
+                    <input type="hidden" name="price" value="150">
+                    <input type="number" name="qty" class="input-responsive" value="1" required>
+                    
+                    
+                </div>
+            </fieldset>
+            <fieldset>
+                <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+            </fieldset>
+        </form>
+    </div>
+</section>
+<footer id="footer"></footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('partials-front/menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('partials-front/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    });
+</script>

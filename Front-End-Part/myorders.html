@@ -1,0 +1,68 @@
+<div id="header"></div>
+
+<div class="main-content">
+    <div class="wrapper">
+        <h1 class="text-center">Order Details</h1>
+
+        <br /><br /><br />
+        <br><br>
+        <center>
+            <table class="content-table">
+                <tr>
+                    <th>S.N. </th>
+                    <th>Food </th>
+                    <th>Price </th>
+                    <th>Qty. </th>
+                    <th>Total </th>
+                    <th>Order Date </th>
+                    <th>Status </th>
+                </tr>
+                <hr>
+                <tr>
+                    <td>1. </td>
+                    <td>Panner Fried Rice</td>
+                    <td>₹150</td>
+                    <td>2</td>
+                    <td>₹300</td>
+                    <td>2024-04-17 12:30:00</td>
+                    <td><label style='color: green;'>Delivered</label></td>
+                </tr>
+                <tr>
+                    <td>2. </td>
+                    <td>Chaddeyas Biryani</td>
+                    <td>₹180</td>
+                    <td>1</td>
+                    <td>₹180</td>
+                    <td>2024-04-16 19:45:00</td>
+                    <td><label>On-Delivery</label></td>
+                </tr>
+                <tr>
+                    <td>3. </td>
+                    <td>Butter Chicken</td>
+                    <td>₹220</td>
+                    <td>1</td>
+                    <td>₹220</td>
+                    <td>2024-04-16 10:15:00</td>
+                    <td><label style='color: rgb(128, 0, 0);'>Cancelled</label></td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</div>
+<div id="footer"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('partials-front/menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('partials-front/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    });
+</script>

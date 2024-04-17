@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/admin.css"> 
+    </head>
+    
+</html>
+<div class="main-content">
+    <ul style="display: flex; justify-content: center; padding: 0; list-style-type: none; background-color: #f5f5f5; border-bottom: 2px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <li style="flex: 1; padding: 20px; border-right: 1px solid #ddd; text-align: center;">
+            <a href="index.html" style="color: #2596a5; text-decoration: none; font-weight: bold;">Home</a>
+        </li>
+        <li style="flex: 1; padding: 20px; border-right: 1px solid #ddd; text-align: center;">
+            <a href="manage-users.html" style="color: #2596a5; text-decoration: none; font-weight: bold;">Users</a>
+        </li>
+        <li style="flex: 1; padding: 20px; border-right: 1px solid #ddd; text-align: center;">
+            <a href="manage-category.html" style="color: #2596a5; text-decoration: none; font-weight: bold;">Category</a>
+        </li>
+        <li style="flex: 1; padding: 20px; border-right: 1px solid #ddd; text-align: center;">
+            <a href="manage-food.html" style="color: #2596a5; text-decoration: none; font-weight: bold;">Food</a>
+        </li>
+        <li style="flex: 1; padding: 20px; border-right: 1px solid #ddd; text-align: center;">
+            <a href="manage-order.html" style="color: #2596a5; text-decoration: none; font-weight: bold;">Order</a>
+        </li>
+        <li style="flex: 1; padding: 20px; text-align: center;">
+            <a href="login.html" style="color: #2596a5; text-decoration: none; font-weight: bold;">Logout</a>
+        </li>
+    </ul>
+    
+    <div class="wrapper">
+        <h1>Add Food</h1>
+
+        <br><br>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+        
+            <table class="tbl-30">
+
+                <tr>
+                    <td>Title: </td>
+                    <td>
+                        <input type="text" name="title" placeholder="Title of the Food">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Description: </td>
+                    <td>
+                        <textarea name="description" cols="30" rows="5" placeholder="Description of the Food."></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Price: </td>
+                    <td>
+                        <input type="number" name="price">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Select Image: </td>
+                    <td>
+                        <input type="file" name="image">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Category: </td>
+                    <td>
+                        <select name="category">
+
+                            <option value="0">No Category Found</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Featured: </td>
+                    <td>
+                        <input type="radio" name="featured" value="Yes"> Yes 
+                        <input type="radio" name="featured" value="No"> No
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Active: </td>
+                    <td>
+                        <input type="radio" name="active" value="Yes"> Yes 
+                        <input type="radio" name="active" value="No"> No
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Add Food" class="btn-secondary">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+</div><footer style="text-align: center; background-color: #f5f5f5; padding: 20px; border-top: 2px solid #ddd; color: #666; font-size: 14px;">
+    &copy; 2024 Unified Food Delivery. All rights reserved.
+</footer>
